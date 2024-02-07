@@ -9,4 +9,4 @@ class CategoryModel(models.Model):
     tag = fields.Char()
     image = fields.Image()
     order = fields.Integer()
-    isActive = fields.Boolean(default=True)
+    isActive = fields.Boolean()
