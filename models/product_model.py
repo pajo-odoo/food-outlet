@@ -1,10 +1,12 @@
+#-*- coding: utf-8 -*-
+
 from odoo import fields, models
 
 class ProductModel(models.Model):
-    _name = "product.model"
-    _description = "Product Model"
+    _name = 'product.model'
+    _description = 'Product Model'
 
-    name = fields.Char("Product Name", required=True)
+    name = fields.Char('Product Name', required=True)
     description = fields.Text()
     is_available = fields.Boolean()
     price = fields.Integer()
@@ -17,3 +19,4 @@ class ProductModel(models.Model):
         )
     tag = fields.Char()
     time_to_cook = fields.Integer()
+    restaurant_id = fields.Many2One(string='Restaurant', comodel_name='restaurant.model')

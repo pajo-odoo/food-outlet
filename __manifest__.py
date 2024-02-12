@@ -10,4 +10,5 @@
     'application': True,
     'license': 'OEEL-1',
     'version': '1.0',
+    'depends': ['base'],
 }
