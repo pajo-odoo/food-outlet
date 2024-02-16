@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="category_model_view_tree" model="ir.ui.view">
+        <field name="name">category.model.tree</field>
+        <field name="model">category.model</field>
+        <field name="arch" type="xml">
+             <tree>
+                <field name="name"></field>
+                <field name="subcategory_ids" widget="many2many_tags"></field>
+                <field name="tag_ids" widget="many2many_tags"></field>
+             </tree>
+        </field>
+    </record>
+
+    <record id="category_model_view_form" model="ir.ui.view">
+        <field name="name">category.model.form</field>
+        <field name="model">category.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title mb-3">
+                        <h1>
+                            <lable for="name" string="Name"></lable>
+                            <field name="name" placeholder="Category Name"></field>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="description"></field>
+                            <field name="tag_ids" widget="many2many_tags"></field>
+                            <field name="order"></field>
+                        </group>
+                        <group>
+                            <field name="image"></field>
+                            <field name="active"></field>
+                            <field name="subcategory_ids" widget="many2many_tags"></field>
+                        </group>
+                        <notebook>
+                            <page string="Restaurants">
+                                <field name="restaurant_ids">
+                                    <tree open_form_view="True" editable="top">
+                                        <field name="name"></field>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="category_model_search_view" model="ir.ui.view">
+        <field name="name">category.model.search</field>
+        <field name="model">category.model</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"></field>
+                <field name="subcategory_ids"></field>
+                <field name="tag_ids"></field>
+                <filter string="Active" name="active" domain="[('active', '=', 'set')]"/>
+                <filter string="Subcategory" name="subcategory" context="{'group_by':'subcategory_ids'}"/>
+                <filter string="Tag" name="tag" context="{'group_by':'tag_ids'}"/>
+                <filter string="Restaurant" name="restaurant" context="{'group_by':'restaurant_ids'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="category_model_action" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">category.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

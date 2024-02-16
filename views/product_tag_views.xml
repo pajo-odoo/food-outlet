@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_tag_model_view_tree" model="ir.ui.view">
+        <field name="name">product.tag.model.tree</field>
+        <field name="model">product.tag.model</field>
+        <field name="arch" type="xml">
+            <tree open_form_view="True" editable="top">
+                <field name="name"></field>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_tag_model_action" model="ir.actions.act_window">
+        <field name="name">Product Tags</field>
+        <field name="res_model">product.tag.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

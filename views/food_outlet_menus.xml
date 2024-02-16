@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="root_level_menu" name="Food Outlet">
+        <menuitem id="first_level_menu_restaurants" name="Restaurants" action="restaurant_model_action"></menuitem>
+        <menuitem id="first_level_menu_settings" name="Settings">
+            <menuitem id="menu_action_2" action="category_model_action"></menuitem>
+            <menuitem id="menu_action_3" action="subcategory_model_action"></menuitem>
+            <menuitem id="menu_action_4" action="product_model_action"></menuitem>
+            <menuitem id="menu_action_5" action="category_tag_model_action"></menuitem>
+            <menuitem id="menu_action_6" action="product_tag_model_action"></menuitem>
+        </menuitem>
+    </menuitem>
+</odoo>

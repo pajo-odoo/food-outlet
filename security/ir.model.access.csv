@@ -1,0 +1,7 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+food-outlet.access_product_model,access_product_model,food-outlet.model_product_model,base.group_user,1,1,1,1
+food-outlet.access_restaurant_model,access_restaurant_model,food-outlet.model_restaurant_model,base.group_user,1,1,1,1
+food-outlet.access_category_model,access_category_model,food-outlet.model_category_model,base.group_user,1,1,1,1
+food-outlet.access_subcategory_model,access_subcategory_model,food-outlet.model_subcategory_model,base.group_user,1,1,1,1
+food-outlet.access_category_tag_model,access_category_tag_model,food-outlet.model_category_tag_model,base.group_user,1,1,1,1
+food-outlet.access_product_tag_model,access_product_tag_model,food-outlet.model_product_tag_model,base.group_user,1,1,1,1

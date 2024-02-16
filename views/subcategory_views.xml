@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="subcategory_model_view_tree" model="ir.ui.view">
+       <field name="name">subcategory.model.tree</field>
+       <field name="model">subcategory.model</field>
+       <field name="arch" type="xml">
+            <tree open_form_view="True" editable="top">
+                <field name="name"></field>
+            </tree>
+       </field>
+    </record>
+
+    <record id="subcategory_view_form" model="ir.ui.view">
+        <field name="name">subcategory.model.form</field>
+        <field name="model">subcategory.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <gorup>
+                        <group>
+                            <field name="name"></field>
+                            <field name="image"></field>
+                        </group>
+                    </gorup>
+                    <notebook>
+                        <page string="Categories">
+                            <field name="category_ids">
+                                <tree open_form_view="True" editable="top">
+                                    <field name="name"></field>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="subcategory_model_search_view" model="ir.ui.view">
+        <field name="name">subcategory.model.search</field>
+        <field name="model">subcategory.model</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"></field>
+                <field name="category_ids"></field>
+                <filter string="Category" name="category" context="{'group_by':'category_ids'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="subcategory_model_action" model="ir.actions.act_window">
+        <field name="name">Subcategories</field>
+        <field name="res_model">subcategory.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
