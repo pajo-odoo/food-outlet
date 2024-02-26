@@ -37,6 +37,7 @@
                             <field name="price"></field>
                             <field name="time_to_cook"></field>
                             <field name="subcategory_id"></field>
+                            <field name="restaurant_id"></field>
                         </group>
                     </group>
                 </sheet>

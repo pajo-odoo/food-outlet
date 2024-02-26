@@ -47,6 +47,13 @@
                                     </group>
                                 </group>
                             </page>
+                            <page string="Products">
+                                <field name="product_ids">
+                                    <tree>
+                                        <field name="name"></field>
+                                    </tree>
+                                </field>
+                            </page>
                         </notebook>
                     </group>
                 </sheet>

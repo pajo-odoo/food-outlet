@@ -5,6 +5,7 @@
         <field name="model">category.model</field>
         <field name="arch" type="xml">
              <tree>
+                <field name="sequence" widget="handle"/>
                 <field name="name"></field>
                 <field name="subcategory_ids" widget="many2many_tags"></field>
                 <field name="tag_ids" widget="many2many_tags"></field>
